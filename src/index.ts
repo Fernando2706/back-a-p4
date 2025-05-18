@@ -11,7 +11,7 @@ const app = new Elysia()
 const port = process.env.PORT || 3000
 
 // Conexión a MongoDB
-const mongoUrl = process.env.MONGO_URI || 'mongodb://localhost:27017/chat-app';
+const mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/chat-app';
 
 mongoose.connect(mongoUrl)
   .then(() => logger.info('Conectado a MongoDB'))
@@ -21,34 +21,34 @@ mongoose.connect(mongoUrl)
 try {
   // Logger de peticiones
   app.use(requestLogger());
-  
+
   // Configuración de Swagger
   app.use(
-    swagger({ 
-      documentation: { 
-        info: { 
-          title: 'Back A P4', 
-          version: '1.0.0' 
-        } 
-      }, 
-      path: '/docs' 
+    swagger({
+      documentation: {
+        info: {
+          title: 'Back A P4',
+          version: '1.0.0'
+        }
+      },
+      path: '/docs'
     })
   );
-  
+
   // Rutas
   app.use(contactRouter);
   app.use(chatRouter);
   app.use(messageRouter);
-  
+
   // Manejador de errores global
   app.onError(({ code, error, set }) => {
     logger.error(`Error [${code}]`, error);
     set.status = 500;
     return { error: 'Error interno del servidor' };
   });
-  
+
   app.listen(port, () => {
-    logger.info(`Servidor iniciado en http://localhost:${port}`);    
+    logger.info(`Servidor iniciado en http://localhost:${port}`);
     logger.info(`Documentación de la API disponible en http://localhost:${port}/docs`);
   });
 } catch (error) {
