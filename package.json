@@ -1,0 +1,25 @@
+{
+  "name": "back-a-p4",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "0.7.2",
+    "@elysiajs/swagger": "0.7.3",
+    "@types/node": "20.12.7",
+    "date-fns": "^4.1.0",
+    "dotenv": "16.3.1",
+    "elysia": "0.8.15",
+    "mongoose": "8.15.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.3.3"
+  }
+}
