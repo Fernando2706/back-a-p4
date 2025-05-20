@@ -21,6 +21,7 @@ mongoose.connect(mongoUrl)
 try {
   // Logger de peticiones
   app.use(requestLogger());
+  app.use(cors());
 
   // Configuración de Swagger
   app.use(
