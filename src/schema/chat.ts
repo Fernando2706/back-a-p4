@@ -3,6 +3,7 @@ import { z } from 'zod';
 
 // Interfaz para el documento Chat
 interface IChat extends Document {
+  _id: mongoose.Types.ObjectId; // Explicitly define _id for better typing
   contactId: mongoose.Types.ObjectId;
   messageIds: mongoose.Types.ObjectId[];
   lastMessage: mongoose.Types.ObjectId | null;

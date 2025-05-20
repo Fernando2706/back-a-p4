@@ -100,6 +100,7 @@ export const contactRouter = new Elysia({ prefix: '/contacts' })
                                             name: { type: 'string' },
                                             email: { type: 'string' },
                                             phone: { type: 'string' },
+                                            chatId: { type: 'string' },
                                             createdAt: { type: 'string', format: 'date-time' },
                                             updatedAt: { type: 'string', format: 'date-time' }
                                         }
@@ -184,6 +185,7 @@ export const contactRouter = new Elysia({ prefix: '/contacts' })
                                                 name: { type: 'string' },
                                                 email: { type: 'string' },
                                                 phone: { type: 'string' },
+                                                chatId: { type: 'string' },
                                                 createdAt: { type: 'string', format: 'date-time' },
                                                 updatedAt: { type: 'string', format: 'date-time' }
                                             }
@@ -233,6 +235,7 @@ export const contactRouter = new Elysia({ prefix: '/contacts' })
                                     name: { type: 'string' },
                                     email: { type: 'string' },
                                     phone: { type: 'string' },
+                                    chatId: { type: 'string' },
                                     createdAt: { type: 'string', format: 'date-time' },
                                     updatedAt: { type: 'string', format: 'date-time' }
                                 }
@@ -308,6 +311,7 @@ export const contactRouter = new Elysia({ prefix: '/contacts' })
                                     name: { type: 'string' },
                                     email: { type: 'string' },
                                     phone: { type: 'string' },
+                                    chatId: { type: 'string' },
                                     createdAt: { type: 'string', format: 'date-time' },
                                     updatedAt: { type: 'string', format: 'date-time' }
                                 }
@@ -421,6 +425,7 @@ export const contactRouter = new Elysia({ prefix: '/contacts' })
                                     name: { type: 'string' },
                                     email: { type: 'string' },
                                     phone: { type: 'string' },
+                                    chatId: { type: 'string' },
                                     createdAt: { type: 'string', format: 'date-time' },
                                     updatedAt: { type: 'string', format: 'date-time' }
                                 }
